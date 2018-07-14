@@ -27,7 +27,6 @@ import org.wso2.carbon.jndi.internal.java.JavaURLContextFactory;
 import org.wso2.carbon.jndi.internal.osgi.JNDIContextManagerServiceFactory;
 import org.wso2.carbon.jndi.internal.osgi.OSGiURLContextServiceFactory;
 import org.wso2.carbon.jndi.internal.osgi.builder.DefaultContextFactoryBuilder;
-import org.wso2.carbon.jndi.internal.osgi.builder.DefaultObjectFactoryBuilder;
 
 import java.util.Dictionary;
 import java.util.Hashtable;
@@ -50,7 +49,6 @@ public class JNDIActivator implements BundleActivator {
 
         try {
             NamingManager.setInitialContextFactoryBuilder(new DefaultContextFactoryBuilder());
-            NamingManager.setObjectFactoryBuilder(new DefaultObjectFactoryBuilder());
 
             Dictionary<String, String> propertyMap = new Hashtable<>();
             propertyMap.put(JNDIConstants.JNDI_URLSCHEME, "java");
